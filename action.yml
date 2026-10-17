@@ -1,0 +1,9 @@
+name: cb-lint-reporter
+description: ChainBreaker lab demo composite action.
+runs:
+  using: composite
+  steps:
+    - uses: chainbreaker-lab-divy/cb-setup-reviewer@v1
+    - uses: chainbreaker-lab-divy/cb-changed-files@v3
+    - run: echo "lint report (demo)"
+      shell: bash
